@@ -1,0 +1,58 @@
+<!-- Using onclick
+1. Recreate layout
+2. Change the text to say "Logout" when clicking the "Login" button
+3. Remove the Add Definition button when it is clicked
+4. Alert "Ninja was liked" -->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Button Clicker</title>
+        <link rel="stylesheet" href="normalize.css">
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+        <div class="container">
+            <!-- Dojonary Bar -->
+            <div class="topBar"> 
+                <h1 class="dojonary">Dojonary</h1>
+                <input  class="searchBar" type="text" name="search" placeholder="Search">
+                <button class="button login" onclick="login(this)">Login</button> <!--add onclick and (this), function logout to login in js-->
+            </div>
+            <!-- Left Definition Boxes -->
+            <div class="boxesContainer">
+                <div class="leftSide">
+                    <div class="box definition">
+                        <div class="leftNinja">
+                            <h1>ninja</h1>
+                            <p><em>noun</em></p> <!-- italic -->
+                            <p>Plural: <em>ninjas</em></p>
+                            <button class="button like" onclick="alertWindow()">13 likes</button> <!-- add onclick, function alertWindow in js-->
+                        </div>
+                        <p class="definitionTextFormat">A practitioner skilled in the <a href="https://www.wordreference.com/">Japanese</a> art of <a href="https://www.wordreference.com/">ninjutsu</a></p>
+                    </div>
+                    <!-- 2nd Box -->
+                    <div class="box definition">
+                        <div class="leftNinja">
+                            <h1>ninja</h1>
+                            <p><em>noun</em></p>
+                            <p>Plural: <em>ninjas</em></p>
+                            <button class="button like" onclick="alertWindow()">37 likes</button><!--function alertWindow in js-->
+                        </div>
+                        <p class="definitionTextFormat">A <a href="https://www.wordreference.com/">programmer</a> who breaks down problems with <a href="https://www.wordreference.com/">zen</a>-like focus</p>
+                    </div>
+                </div>
+                <div class="rightSide">
+                    <!-- Right box -->
+                    <div class="box">
+                        <h2>Dojonary is defined by YOU</h2>
+                        <button class="button add" onclick="hide(this)">Add Definition</button> <!--function hide in js-->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="script.js"></script>
+    </body>
+</html>
